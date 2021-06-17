@@ -1,0 +1,130 @@
+<html lang="en">
+
+  <head>
+    <title>Cat Ormerod - Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css"
+      integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+              >&times;</button>
+              <h4 class="modal-title" id="modal-project-title">Project Title</h4>
+            </div>
+            <div class="modal-body">
+              <div id="modal-image"></div>
+              <div id="modal-project-description"></div>
+              <div id="modal-project-tools"></div>
+
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-default"
+                id="modal-repo"
+              >GitHub Repo</button>
+              <button
+                type="button"
+                class="btn btn-default"
+                id="modal-live-page"
+              >Live Deployed Page</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Navbar with links to the page as well as a downloadable resume-->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">My Portfolio</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="/aboutme">About Me</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact">Contact Me</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a
+                href="./assets/images/resume.pdf"
+                download="Cat-Ormerod-Resume"
+              >Download Resume</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      {{{body}}}
+    </main>
+    <footer class="container-fluid text-center" id="contact-me">
+      <p>Check out my social media</p>
+      <div class="icon-bar">
+        <a href="https://www.linkedin.com/in/cat-ormerod/" class="linkedin"><i
+            class="fa fa-linkedin"
+          ></i></a>
+        <a href="https://github.com/CatOrmerod" class="github"><i
+            class="fa fa-github"
+          ></i></a>
+        <a href="mailto:catormerod@gmail.com" class="email"><i
+            class="far fa-envelope"
+          ></i></a>
+      </div>
+    </footer>
+
+    <!--script links for jQuery, bootstrap and script file-->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
+      integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+
+</html>

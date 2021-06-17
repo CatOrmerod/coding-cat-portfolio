@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+  }
+
+  /* Variables Styling*/
+
+:root {
+    --light: #dfdcda;
+    --dark: #2d2d2d;
+    --pink: #efc4d5;
+  }
+  
+  /*Elements Selectors*/
+  body {
+    background-color: var(--light);
+    color: var(--dark);
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+    
+  h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+    word-break: break-all;
+  }
+    
+  h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: var(--light);
+    padding: 10px;
+  }
+  
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: var(--dark);
+    color: var(--pink);
+  }
+  
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color:  var(--dark);
+    color: var(--pink);
+    padding: 25px;
+  }
+  
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+    min-height:200px;
+}
+  
+  /* Style the icon bar links */
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: var(--light);
+    font-size: 20px;
+  }
+
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
