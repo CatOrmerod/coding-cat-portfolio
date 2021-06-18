@@ -12,10 +12,10 @@ $('#myModal').on('show.bs.modal', async function (event) {
     });
     var project = await response.json();
     await delay(2000)
-    $('#modal-loading').hide();
+    $('.loader').hide();
     console.log(project);
     modal.find('#modal-project-title').text(project.projectTitle)
-    $('#modal-image').html(project.projectPic)
+    $('#modal-image').html(project.projectScreenshot)
     $('#modal-project-description').html(project.projectDescription)
     $('#modal-project-tools').html(project.projectTools)
     //populate buttons with the urls so when clicked will take to the relevant websites

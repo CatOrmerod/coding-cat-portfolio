@@ -9,10 +9,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <script src="https://kit.fontawesome.com/c83e6599af.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700"
@@ -42,7 +39,7 @@
               <h4 class="modal-title" id="modal-project-title">Project Title</h4>
             </div>
             <div class="modal-body">
-              <div id="modal-loading"><h1>Loading</h1></div>
+              <div class="loader"></div>
               <div id="modal-image"></div>
               <div id="modal-project-description"></div>
               <div id="modal-project-tools"></div>
@@ -82,18 +79,18 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="/aboutme">About Me</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="/contact">Contact Me</a></li>
             <li><a
-                href="./assets/images/resume.pdf"
+                href="./images/resume.pdf"
                 download="Cat-Ormerod-Resume"
               >Download Resume</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {{#if logged_in}}
-            <li><a href="/logout">Logout</a></li>
+            <li><a id="logout" href="/logout">Logout</a></li>
             {{else}}
             <li><a href="/login">Admin</a></li>
           </ul>
@@ -105,17 +102,11 @@
       {{{body}}}
     </main>
     <footer class="container-fluid text-center" id="contact-me">
-      <p>Check out my social media</p>
+      <p>Connect with me</p>
       <div class="icon-bar">
-        <a href="https://www.linkedin.com/in/cat-ormerod/" class="linkedin"><i
-            class="fa fa-linkedin"
-          ></i></a>
-        <a href="https://github.com/CatOrmerod" class="github"><i
-            class="fa fa-github"
-          ></i></a>
-        <a href="mailto:catormerod@gmail.com" class="email"><i
-            class="far fa-envelope"
-          ></i></a>
+        <a href="https://www.linkedin.com/in/cat-ormerod/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/CatOrmerod" class="github"><i class="fa fa-github"></i></a>
+        <a href="mailto:catormerod@gmail.com" class="email"><i class="fas fa-at"></i></a>
       </div>
     </footer>
 

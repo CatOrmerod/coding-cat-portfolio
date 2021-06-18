@@ -46,9 +46,10 @@
 
   
   /* Center website */
-  .main {
+  main {
     max-width: 1000px;
     margin: auto;
+    padding: 0 10px ;
   }
   
   .row {
@@ -104,7 +105,6 @@
   
   /* Style the icon bar links */
   .icon-bar a {
-    display: block;
     text-align: center;
     padding: 16px;
     transition: all 0.3s ease;
@@ -122,23 +122,23 @@
   }
   
   .btn {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
     text-decoration: none;
     padding: 10px 5px;
     width: 100%;
     display: block;
     margin: 15px 0;
     border-radius: var(--border-radius);
-    color: var(--light);
+    color: var(--pink);
     border: none;
     outline: none;
-    background-color: var(--pink);
+    background-color: var(--dark);
     transform: translate(-1px, -1px);
   }
   
   .btn:hover {
-    color: var(--light);
-    background-color: var(--dark);
+    color: var(--dark);
+    background-color: var(--pink);
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
   }
@@ -168,10 +168,14 @@
     display: inline-block;
     margin: 0.625rem 0 0.25rem 0.3rem;
   }
+
+  .form-group {
+    margin: 0;
+  }
   
   form .form-input {
     width: 100%;
-    padding: 0.25rem;
+    padding: 0 0.25rem;
     color: var(--dark);
     background-color: var(--light);
     margin: 0.625rem 0;
@@ -180,8 +184,8 @@
   }
   
   .card-item {
-    margin: 0.625rem 0;
-    padding: 0.25rem;
+    margin: 0.25rem 0;
+    padding: 0 0.25rem;
     background-color: var(--light);
     list-style: none;
     border-radius: var(--border-radius);
@@ -189,8 +193,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
-  /* Responsive layout - makes a two column-layout instead of four columns */
+  /* Responsive layout - makes a two column-layout instead of four columns
   @media screen and (max-width: 900px) {
     .column {
       width: 50%;
@@ -198,8 +215,8 @@
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
     .column {
       width: 100%;
     }
-  }
+  } */

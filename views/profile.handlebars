@@ -50,9 +50,9 @@
   </div>
   <div class="card-body">
     {{#each projects as |project|}}
-    <h6><a href="/admin/update/{{project.id}}" class="update">
+    <h6><a href="/profile/update/{{project.id}}" class="update">
         <div class="card-item">
-          {{format_text project.title}}
+          {{format_text project.projectTitle}}
         </div>
       </a></h6>
     {{/each}}
