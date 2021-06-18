@@ -1,0 +1,64 @@
+<div class="card">
+  <div class="card-header">
+    <h5>Add Project:</h5>
+  </div>
+  <div class="card-body">
+    <form class="form add-project-form" id="add-project-form">
+      <div class="form-group">
+        <label for="project-title">Project Title:</label>
+        <input class="form-input" type="text" id="project-title" name="project-title" />
+      </div>
+      <div class="form-group">
+        <label for="project-description">Project Description:</label>
+        <textarea class="form-input" id="project-description" name="project-description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-tools">Project Tools:</label>
+        <textarea class="form-input" id="project-tools" name="project-tools"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-role">Project Role:</label>
+        <textarea class="form-input" id="project-role" name="project-role"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-repo">Project Repo:</label>
+        <textarea class="form-input" id="project-repo" name="project-repo"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-url">Project URL:</label>
+        <textarea class="form-input" id="project-url" name="project-url"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-screenshot">Project Screenshot:</label>
+        <textarea class="form-input" id="project-screenshot" name="project-screenshot"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-pic">Project Pic:</label>
+        <textarea class="form-input" id="project-pic" name="project-pic"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn">Add Project</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{#if projects.length}}
+<div class="card projects-list">
+  <div class="card-header">
+    <h5>Projects:</h5>
+  </div>
+  <div class="card-body">
+    {{#each projects as |project|}}
+    <h6><a href="/admin/update/{{project.id}}" class="update">
+        <div class="card-item">
+          {{format_text project.title}}
+        </div>
+      </a></h6>
+    {{/each}}
+  </div>
+</div>
+{{/if}}
+
+
+<script src="/js/addproject.js"></script>

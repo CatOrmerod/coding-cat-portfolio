@@ -1,25 +1,3 @@
-<!--portfolio gallery-->
-    <div class="row" id="projects">
-        <div class="column">
-          <div class="content">
-            <img src="./assets/images/day-planner.jpg" alt="Man frustrated" style="width:100%">
-            <h3>Workday Scheduler</h3>
-            <p>Sole Author</p>
-            <button type="button" class="modalButton" data-toggle="modal" data-target="#myModal" data-id="1">See More</button>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <img src="./assets/images/weather-pic.jpg" alt="snowing" style="width:100%">
-            <h3>Weather App</h3>
-            <p>Sole Author</p>
-            <button type="button" class="modalButton" data-toggle="modal" data-target="#myModal" data-id="2">See More</button>
-          </div>
-        </div>
-      
-      <div class="content">
-        <img src="./assets/images/cocktails-pic.jpg" alt="cocktails" style="width:100%">
-        <h3>Tipsy Tricks</h3>
-        <p>Group Project</p>
-        <button type="button" class="modalButton" data-toggle="modal" data-target="#myModal" data-id="3">See More</button>
-      </div><br>
+{{#each projects as |project| }}
+{{> project }}
+{{/each}}

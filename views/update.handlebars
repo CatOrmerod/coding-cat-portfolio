@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="card-header">
+    <h5>Update your Project Details:</h5>
+  </div>
+  <div class="card-body">
+    <form class="form update-project-form" id="update-project-form">
+      <div class="form-group">
+        <label for="project-title">Project Title:</label>
+        <input class="form-input" type="text" id="project-title" name="project-title" value="{{projectTitle}}" />
+      </div>
+      <div class="form-group">
+        <label for="project-description">Project Description:</label>
+        <textarea class="form-input" id="project-description" name="project-description">{{projectDescription}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-tools">Project Tools:</label>
+        <textarea class="form-input" id="project-tools" name="project-tools">{{projectTools}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-role">Project Role:</label>
+        <textarea class="form-input" id="project-role" name="project-role">{{projectRole}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-repo">Project Repo:</label>
+        <textarea class="form-input" id="project-repo" name="project-repo">{{projectRepo}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-url">Project URL:</label>
+        <textarea class="form-input" id="project-url" name="project-url">{{projectURL}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-screenshot">Project Screenshot:</label>
+        <textarea class="form-input" id="project-screenshot" name="project-screenshot">{{projectScreenshot}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="project-pic">Project Pic:</label>
+        <textarea class="form-input" id="project-pic" name="project-pic">{{projectPic}}</textarea>
+      </div>
+      <div class="update-form-group">
+        <button type="submit" class="btn" id="updateBtn" data-id="{{id}}">Save Update</button>
+        <button class="btn" id="deleteBtn" data-id="{{id}}">Delete Project</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/update.js"></script>

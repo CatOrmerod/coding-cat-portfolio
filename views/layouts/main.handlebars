@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -22,7 +23,7 @@
       integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
   </head>
 
@@ -41,6 +42,7 @@
               <h4 class="modal-title" id="modal-project-title">Project Title</h4>
             </div>
             <div class="modal-body">
+              <div id="modal-loading"><h1>Loading</h1></div>
               <div id="modal-image"></div>
               <div id="modal-project-description"></div>
               <div id="modal-project-tools"></div>
@@ -84,13 +86,18 @@
             <li><a href="/aboutme">About Me</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="/contact">Contact Me</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
             <li><a
                 href="./assets/images/resume.pdf"
                 download="Cat-Ormerod-Resume"
               >Download Resume</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            {{#if logged_in}}
+            <li><a href="/logout">Logout</a></li>
+            {{else}}
+            <li><a href="/login">Admin</a></li>
+          </ul>
+            {{/if}}
         </div>
       </div>
     </nav>
@@ -124,7 +131,10 @@
       integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
       crossorigin="anonymous"
     ></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/modals.js"></script>
+    {{#if logged_in}}
+        <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 
 </html>
