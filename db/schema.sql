@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS coding-cat_db;
-CREATE DATABASE coding-cat_db;
+DROP DATABASE IF EXISTS codingcat_db;
+CREATE DATABASE codingcat_db;
