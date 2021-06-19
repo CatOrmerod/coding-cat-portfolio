@@ -27,6 +27,5 @@ $('#myModal').on('show.bs.modal', async function (event) {
     $("#modal-live-page").on("click", function(){
         window.open(project.projectURL)
     });
-
 })
 

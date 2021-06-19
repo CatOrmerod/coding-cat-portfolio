@@ -1,131 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <title>Cat Ormerod - Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c83e6599af.js" crossorigin="anonymous"></script>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css"
-      integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A=="
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css"
+        integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/style.css" />
 
-  </head>
+</head>
 
-  <body>
-    <div class="container">
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-              >&times;</button>
-              <h4 class="modal-title" id="modal-project-title">Project Title</h4>
+<body>
+    {{!-- <div class="container"> --}}
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-project-title">Project Title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="loader"></div>
+                        <div id="modal-image"></div>
+                        <div id="modal-project-description"></div>
+                        <div id="modal-project-tools"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="modal-repo">GitHub Repo</button>
+                        <button type="button" class="btn btn-default" id="modal-live-page">Live Deployed Page</button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-              <div class="loader"></div>
-              <div id="modal-image"></div>
-              <div id="modal-project-description"></div>
-              <div id="modal-project-tools"></div>
-
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                id="modal-repo"
-              >GitHub Repo</button>
-              <button
-                type="button"
-                class="btn btn-default"
-                id="modal-live-page"
-              >Live Deployed Page</button>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
+        {{!--
+    </div> --}}
     <!--Navbar with links to the page as well as a downloadable resume-->
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target="#myNavbar"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">My Portfolio</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Coding Cat Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutme">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./images/resume.pdf" download="Cat-Ormerod-Resume">Resume</a>
+                    </li>
+                    {{#if logged_in}}
+                    <li class="nav-item"><a class="nav-link" id="logout" href="/logout">Logout</a></li>
+                    {{else}}
+                    <li class="nav-item"><a class="nav-link" href="/login">Admin</a></li>
+                    {{/if}}
+                </ul>
+                    
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/aboutme">About Me</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact Me</a></li>
-            <li><a
-                href="./images/resume.pdf"
-                download="Cat-Ormerod-Resume"
-              >Download Resume</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            {{#if logged_in}}
-            <li><a id="logout" href="/logout">Logout</a></li>
-            {{else}}
-            <li><a href="/login">Admin</a></li>
-          </ul>
-            {{/if}}
-        </div>
-      </div>
     </nav>
     <main>
-      {{{body}}}
+        {{{body}}}
     </main>
     <footer class="container-fluid text-center" id="contact-me">
-      <p>Connect with me</p>
-      <div class="icon-bar">
-        <a href="https://www.linkedin.com/in/cat-ormerod/" class="linkedin"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/CatOrmerod" class="github"><i class="fa fa-github"></i></a>
-        <a href="mailto:catormerod@gmail.com" class="email"><i class="fas fa-at"></i></a>
-      </div>
+        <p>Connect with me</p>
+        <div class="icon-bar">
+            <a href="https://www.linkedin.com/in/cat-ormerod/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/CatOrmerod" class="github"><i class="fa fa-github"></i></a>
+            <a href="mailto:catormerod@gmail.com" class="email"><i class="fas fa-at"></i></a>
+        </div>
     </footer>
 
     <!--script links for jQuery, bootstrap and script file-->
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
-      integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
+        integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
+        crossorigin="anonymous"></script>
     <script src="./js/modals.js"></script>
     {{#if logged_in}}
-        <script src="/js/logout.js"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
-  </body>
+</body>
 
 </html>
