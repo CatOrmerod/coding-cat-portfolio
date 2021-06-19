@@ -9,8 +9,8 @@ const updateProjectHandler = async (event) => {
   const projectURL = document.querySelector("#project-url").value.trim();
   const projectPic = document.querySelector("#project-pic").value.trim();
   const projectScreenshot = document.querySelector("#project-screenshot").value.trim();
+  const id = document.querySelector('#updateBtn').getAttribute('data-id');
 
-  if (projectTitle) {
     const response = await fetch(`/api/projects/${id}`, {
       method: "PUT",
       body: JSON.stringify({
@@ -32,8 +32,7 @@ const updateProjectHandler = async (event) => {
       document.location.replace("/projects");
     } else {
       alert("Failed to add project");
-    }
-  }
+    } 
 };
 
 document
