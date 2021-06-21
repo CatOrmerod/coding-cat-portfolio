@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <title>Cat Ormerod - Portfolio</title>
@@ -9,14 +9,16 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c83e6599af.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css"
         integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
 </head>
 
-<body>
+<body class="d-flex h-100 text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     {{!-- <div class="container"> --}}
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -33,8 +35,8 @@
                         <div id="modal-project-tools"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" id="modal-repo">GitHub Repo</button>
-                        <button type="button" class="btn btn-default" id="modal-live-page">Live Deployed Page</button>
+                        <button type="button" class="btn" id="modal-repo">GitHub Repo</button>
+                        <button type="button" class="btn" id="modal-live-page">Live Deployed Page</button>
                     </div>
                 </div>
             </div>
@@ -42,20 +44,17 @@
         {{!--
     </div> --}}
     <!--Navbar with links to the page as well as a downloadable resume-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Coding Cat Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end float-md-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/aboutme">About Me</a>
+                        <a class="nav-link active" aria-current="page" href="/aboutme">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/projects">Projects</a>
@@ -64,7 +63,7 @@
                         <a class="nav-link" href="/contact">Contact Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./images/resume.pdf" download="Cat-Ormerod-Resume">Resume</a>
+                        <a class="nav-link" href="/resume">Resume</a>
                     </li>
                     {{#if logged_in}}
                     <li class="nav-item"><a class="nav-link" id="logout" href="/logout">Logout</a></li>
@@ -78,9 +77,8 @@
     </nav>
     <main>
         {{{body}}}
-    </main>
+    </main class="px-3">
     <footer class="container-fluid text-center" id="contact-me">
-        <p>Connect with me</p>
         <div class="icon-bar">
             <a href="https://www.linkedin.com/in/cat-ormerod/" class="linkedin"><i class="fa fa-linkedin"></i></a>
             <a href="https://github.com/CatOrmerod" class="github"><i class="fa fa-github"></i></a>
@@ -100,6 +98,7 @@
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
+    </div>
 </body>
 
 </html>
