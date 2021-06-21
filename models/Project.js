@@ -26,15 +26,9 @@ Project.init(
         },
         projectRepo: {
             type: DataTypes.STRING,
-            validate: {
-                isUrl: true,
-            },
         },
         projectURL: {
             type: DataTypes.STRING,
-            validate: {
-                isUrl: true,
-            },
         },
         projectScreenshot: {
             type: DataTypes.STRING,

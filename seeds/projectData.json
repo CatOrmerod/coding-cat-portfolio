@@ -1,12 +1,56 @@
 [
   {
+    "projectTitle": "You have the right to switch off",
+    "projectDescription": "An application that highlights the hour and cost implications to a workers year by working unpaid overtime on a regular basis.",
+    "projectTools": "Node.js, Express.js, MySQL, Sequelize, Handlebars.js, Bcrypt, Objects2csv, Nodemailer, JavaScript, HTML, Bootstrap, CSS, Heroku",
+    "projectRepo": "https://github.com/CatOrmerod/unpaid-overtime-calc",
+    "projectURL": "https://the-right-to-switch-off.herokuapp.com/",
+    "projectScreenshot": "<img src='./images/screenshot-overworked.png' alt='Image' style='width:100%;max-width:300px'>",
+    "projectPic": "<img src='./images/hourglass-top.svg' alt='Image' style='width:90%;max-width:300px'>",
+    "projectRole": "Group Project",
+    "user_id": 1
+  },
+  {
+    "projectTitle": "Tech Blog",
+    "projectDescription": "A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.",
+    "projectTools": "Node.js, Express.js, MySQL, Sequelize, Handlebars.js, Bcrypt, JavaScript, HTML, CSS, Heroku",
+    "projectRepo": "https://github.com/CatOrmerod/tech-blog",
+    "projectURL": "https://tech-blog-ormerod.herokuapp.com/ ",
+    "projectScreenshot": "<img src='./images/work-day-scheduler-screenshot.png' alt='Image' style='width:100%;max-width:300px'>",
+    "projectPic": "<img src='./images/chat-text-fill.svg' alt='Image' style='width:90%;max-width:300px'>",
+    "projectRole": "Sole Author",
+    "user_id": 1
+  },
+  {
+    "projectTitle": "Employee Tracker",
+    "projectDescription": "A command line application to manage a company's employees using node, inquirer, and MySQL",
+    "projectTools": "Node.js, Inquirer, Jest, mySQL",
+    "projectRepo": "https://github.com/CatOrmerod/employee-management-system",
+    "projectURL": "https://github.com/CatOrmerod/employee-management-system",
+    "projectScreenshot": "<img src='./images/work-day-scheduler-screenshot.png' alt='Image' style='width:100%;max-width:300px'>",
+    "projectPic": "<img src='./images/diagram-3-fill.svg' alt='Image' style='width:90%;max-width:300px'>",
+    "projectRole": "Sole Author",
+    "user_id": 1
+  },
+  {
+    "projectTitle": "E-Commerce",
+    "projectDescription": "Built the back end for an e-commerce site by modifying starter code. Configured a working Express.js API to use Sequelize to interact with a MySQL database.",
+    "projectTools": "Express.js, mySQL",
+    "projectRepo": "https://github.com/CatOrmerod/e-commerce",
+    "projectURL": "https://github.com/CatOrmerod/e-commerce",
+    "projectScreenshot": "<img src='./images/work-day-scheduler-screenshot.png' alt='Image' style='width:100%;max-width:300px'>",
+    "projectPic": "<img src='./images/cart-check-fill.svg' alt='Image' style='width:90%;max-width:300px'>",
+    "projectRole": "Sole Author",
+    "user_id": 1
+  },
+  {
     "projectTitle": "Workday Scheduler",
     "projectDescription": "App to display the workday hours where user can save their appointments",
     "projectTools": "HTML, CSS, JavaScript, Bootstrap, GoogleFonts",
     "projectRepo": "https://github.com/CatOrmerod/work-day-scheduler",
     "projectURL": "https://catormerod.github.io/work-day-scheduler/",
     "projectScreenshot": "<img src='./images/work-day-scheduler-screenshot.png' alt='Image' style='width:100%;max-width:300px'>",
-    "projectPic": "<i class='far fa-calendar-alt'></i>",
+    "projectPic": "<img src='./images/calendar2-day-fill.svg' alt='Image' style='width:90%;max-width:300px'>",
     "projectRole": "Sole Author",
     "user_id": 1
   },
@@ -16,8 +60,8 @@
     "projectTools": "HTML, CSS, JavaScript, jQuery, API, Bootstrap, Font Awesome",
     "projectRepo": "https://github.com/CatOrmerod/weather-dashboard",
     "projectURL": "https://catormerod.github.io/weather-dashboard/",
-    "projectPic": "<i class='fas fa-cloud-sun-rain'></i>",
     "projectScreenshot": "<img src='./images/weather-dashboard-screenshot.png' alt='Image' style='width:100%;max-width:300px'>",
+    "projectPic": "<img src='./images/cloud-sun-fill.svg' alt='Image' style='width:90%;max-width:300px'>",
     "projectRole": "Sole Author",
     "user_id": 1
   },
@@ -28,7 +72,7 @@
     "projectRepo": "https://github.com/RichardtHopkins/Cocktail-suggester",
     "projectURL": "https://richardthopkins.github.io/Cocktail-suggester/",
     "projectScreenshot": "<img src='./images/tipsy-tricks-screenshot.png' alt='Image' style='width:100%;max-width:300px'>",
-    "projectPic": "<i class='fas fa-cocktail'></i>",
+    "projectPic": "<img src='./images/key-fill.svg' alt='Bootstrap' width='90%;max-width:300px'>",
     "projectRole": "Group Project",
     "user_id": 1
   }
