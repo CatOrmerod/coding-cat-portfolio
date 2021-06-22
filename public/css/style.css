@@ -120,6 +120,28 @@ footer {
   transform: translate(0, 0);
   /* box-shadow: 2px 2px var(--green); */
 }
+  /* Style the resume link as a button */
+#resume-link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+  margin: 15px 0;
+  border-radius: var(--border-radius);
+  color: var(--white);
+  border: none;
+  outline: 2px dashed var(--pink);
+  background-color: var(--dark);
+  transform: translate(-1px, -1px);
+}
+    
+#resume-link:hover {
+  color: var(--pink);
+  background-color: var(--dark);
+  transform: translate(0, 0);
+    /* box-shadow: 2px 2px var(--green); */
+  }
   
   /* Cards Styling  */
 .card {
