@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
             to: '"Cat Ormerod" <catormerod81@gmail.com>',
             subject: 'Someone wants to get in touch!',
             text: `${req.body.name}, is keen to contact you :)`,
-            html: `<b>Hey Cat, you can reach out to them on ${req.body.email}! </b><br><br>They wanted to ask ${req.body.message}
+            html: `<b>Hey Cat, you can reach out to them on ${req.body.email}! </b><br><br>They wanted to ask ${req.body.comment}
             <b>Cat Ormerod</b>`,
         }; 
         transport.sendMail(mailOptions, (error, info) => {

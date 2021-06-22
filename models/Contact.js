@@ -26,14 +26,10 @@ Contact.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
-        date_created: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'contact'
