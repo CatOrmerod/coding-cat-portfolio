@@ -14,15 +14,11 @@ router.post('/', async (req, res) => {
         });
         var mailOptions = {
             from: '"Cat Ormerod" <catormerod@gmail.com>',
-            to: req.body.email,
-            subject: 'Thanks for getting in touch through my website',
-            text: `Hey ${req.body.name}, thanks for reaching out :)`,
-            html: `<b>Hey ${req.body.email}! </b><br><br>You worked ${req.body.unpaidHours} hours for a total of $${req.body.unpaidSalary}, was it worth it?<br><br> Sign our petition to end unpaid overtime.
-              <br>
-              <br>
-               Do you know anyone else who might like using this calculator? <br>Share them this link: <a href="https://the-right-to-switch-off.herokuapp.com/">https://the-right-to-switch-off.herokuapp.com/</a><br><br> 
-              Thanks,<br>
-              <b>Cat Ormerod</b>`,
+            to: '"Cat Ormerod" <catormerod81@gmail.com>',
+            subject: 'Someone wants to get in touch!',
+            text: `${req.body.name}, is keen to contact you :)`,
+            html: `<b>Hey Cat, you can reach out to them on ${req.body.email}! </b><br><br>They wanted to ask ${req.body.message}
+            <b>Cat Ormerod</b>`,
         }; 
         transport.sendMail(mailOptions, (error, info) => {
             if (error) {
